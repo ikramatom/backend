@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mahasiswa</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Tugas Back-End</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">contac</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- ini bagian konten -->
+      
+<div class="coniner">
+    <div class="row">
+        <div class="col">
+          <h1> Isi Data Mahasiswa :</h1>
+          <form action="/add" method="POST" >
+            <label for="">nama :</label>
+            <input type="text" name="nama"> <br>
+            <label for="">nilai :</label>
+            <input type="number" name="nilai"> <br>
+            <label for="">alamat :</label>
+            <input type="text" name="alamat"> <br>
+            <label for="">Email :</label>
+            <input type="text" name="email"> <br>
+            <label for="">foto :</label>
+            <input type="text" name="foto"> <br>
+            <label for="">no hp :</label>
+            <input type="text" name="no"> <br>
+
+            <button type="submit" class="btn btn-danger">submit</button>
+          </form>
+
+
+<h1> daftar mahasiswa abadi :</h1>
+            <ol>
+                {% for ito in haloo%}
+                <li><a href="/detail/{{ito['id']}}">{{ito['nama']}}</a>
+                  <a href="/update/{{ito['id']}}" class="btn btn-success">update</a>
+                   <a href="" class="btn btn-danger">delete</a></li>
+                {% endfor %}
+            </ol>
+          
+
+        </div>
+
+    </div>
+
+</div>
+    
+</body>
+</html>

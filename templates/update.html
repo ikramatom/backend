@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>update</title>
+</head>
+<body>
+    <a href="/index"><h1><-kembali</h1></a>
+    <br>
+
+    <form action="/updatedata/{{mahasiswa['id']}}" method="POST" >
+        <label for="">nama :</label>
+        <input id="nama" value="{{mahasiswa['nama']}}" type="text" name="nama"> <br>
+        <label for="">nilai :</label>
+        <input id="nama" value="{{mahasiswa['nilai']}}" type="number" name="nilai"> <br>
+        <label for="">alamat :</label>
+        <input id="nama" value="{{mahasiswa['alamat']}}" type="text" name="alamat"> <br>
+        <label for="">Email :</label>
+        <input id="nama" value="{{mahasiswa['email']}}" type="text" name="email"> <br>
+        <label for="">foto :</label>
+        <input id="nama" value="{{mahasiswa['foto']}}" type="text" name="foto"> <br>
+        <label for="">no hp :</label>
+        <input id="nama" value="{{mahasiswa['no_hp']}}" type="text" name="no"> <br>
+
+        <button type="submit" class="btn btn-danger">ubah</button>
+      </form>
+    
+</body>
+</html>

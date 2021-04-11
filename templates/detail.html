@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Detaill</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+ <a href="/index"><h1><-kembali</h1></a>
+ <br>
+     {% for halo in aku%}
+        {% if halo['id'] == kamu %}
+        <div class="container-fluid ">
+          <div class="row ">
+            <div class="col-lg-6">
+              <div class="card" style="width: 14rem;">
+                <img style="object-fit: cover;" src="{{halo['foto']}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <b>{{halo['nama']}}</b>
+                  <p>No HP : {{halo['no_hp']}} </p>
+                  <p>Email : {{halo['email']}}</p>
+                  <p>Alamat : {{halo['alamat']}} </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              {% if halo['nilai'] > 60 %}
+              <div class="text-success text-center"><h1>lulus</h1></div>
+              {% else %}
+              <div class="text-danger text-center"><h1>belum lulus</h1></div>
+              {% endif %}
+            </div>
+
+        </div>
+      </div>
+          <!-- <img src="{{halo['foto']}}" alt="">
+          <p>email : {{halo['email']}}</p> -->
+        {% endif %}
+      {% endfor %}
+ 
+</body>
+</html>
